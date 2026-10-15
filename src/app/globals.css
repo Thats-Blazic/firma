@@ -55,6 +55,9 @@
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
     -webkit-text-size-adjust: 100%;
+    /* Never let the page pan sideways on touch devices (blank space left/right). */
+    overflow-x: clip;
+    touch-action: pan-y pinch-zoom;
   }
 
   body {

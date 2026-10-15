@@ -448,7 +448,13 @@ export function BookingForm() {
 
               {/* Submit */}
               <div className="border-t border-hair pt-8 md:col-span-2">
-                <Button type="submit" variant="whatsapp" size="lg" className="w-full" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  variant="whatsapp"
+                  size="lg"
+                  className="w-full gap-2 px-3 text-sm min-[380px]:gap-2.5 min-[380px]:px-8 min-[380px]:text-[0.9375rem]"
+                  disabled={isSubmitting}
+                >
                   <WhatsAppIcon className="size-5" />
                   Pošalji upit putem WhatsApp-a
                   <Send
@@ -468,7 +474,7 @@ export function BookingForm() {
                       href={telHref(contact.phone)}
                       variant="outline"
                       size="lg"
-                      className="w-full"
+                      className="w-full px-3 min-[380px]:px-8"
                       aria-label={`Pozovite za zakazivanje: ${contact.phone}`}
                     >
                       <Phone className="size-5 text-brand" aria-hidden="true" />

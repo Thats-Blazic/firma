@@ -80,6 +80,7 @@ export function ReviewsSection() {
               target="_blank"
               rel="noopener noreferrer"
               variant="outline"
+              className="h-auto min-h-12 max-w-full whitespace-normal py-2.5 text-center"
               aria-label={`${google.reviewUrl ? "Ostavite recenziju" : "Pogledajte recenzije"} na Google-u (otvara novu karticu)`}
             >
               {google.reviewUrl ? "Ostavite recenziju na Google-u" : "Pogledajte recenzije na Google-u"}
