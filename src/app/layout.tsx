@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/images/hero-cinematic.jpg",
-        width: 2400,
-        height: 1600,
+        url: "/og-image.jpg",
+        width: 1024,
+        height: 537,
         alt: "Adrirora Travel — prevoz putnika i transferi",
       },
     ],
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/images/hero-cinematic.jpg"],
+    images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
 };

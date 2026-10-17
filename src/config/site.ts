@@ -42,7 +42,11 @@ export const siteConfig = {
   description:
     "Udoban i pouzdan prevoz putnika putničkim automobilom do Zlatibora, Ostroga, Budve, Kotora, Tivta, Podgorice i drugih destinacija u Srbiji i Crnoj Gori. Pošaljite upit putem WhatsApp-a.",
   /** Canonical site URL. Override with NEXT_PUBLIC_SITE_URL in production. */
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  // Prefer the configured public URL; on Vercel fall back to the production domain it provides,
+  // so Open Graph / canonical links never point at localhost.
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000"),
   locale: "sr_RS",
   language: "sr-Latn",
 
