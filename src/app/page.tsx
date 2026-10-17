@@ -1,3 +1,4 @@
+import { AvailableTrips } from "@/components/available-trips";
 import { BookingForm } from "@/components/booking-form";
 import { hasReviews } from "@/config/site";
 import { ContactSection } from "@/components/contact-section";
@@ -10,8 +11,13 @@ import { ReviewsSection } from "@/components/reviews-section";
 import { ServicesSection } from "@/components/services-section";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import { isBookingSystemConfigured } from "@/lib/supabase/env";
 
 export default function HomePage() {
+  // With the booking system set up, the live "Trenutni polasci" list sits right above Usluge and
+  // the WhatsApp form below it becomes a secondary 'special request' form.
+  const online = isBookingSystemConfigured();
+
   return (
     <>
       <a
@@ -23,8 +29,18 @@ export default function HomePage() {
       <Navbar />
       <main id="glavni-sadrzaj">
         <HeroSection />
-        <BookingForm />
-        <DestinationsSection />
+        {online ? (
+          <>
+            <DestinationsSection sectionIndex="01" />
+            <AvailableTrips />
+            <BookingForm variant="inquiry" />
+          </>
+        ) : (
+          <>
+            <BookingForm variant="primary" />
+            <DestinationsSection />
+          </>
+        )}
         <ServicesSection />
         <WhyChooseUs />
         {hasReviews ? <ReviewsSection /> : null}

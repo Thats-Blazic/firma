@@ -9,7 +9,7 @@ function tileClass(index: number, total: number) {
   return "";
 }
 
-export function DestinationsSection() {
+export function DestinationsSection({ sectionIndex = "02" }: { sectionIndex?: string }) {
   return (
     <section
       id="destinacije"
@@ -19,7 +19,7 @@ export function DestinationsSection() {
       <div className="container-page">
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
-            index="02"
+            index={sectionIndex}
             id="destinations-title"
             eyebrow="Destinacije"
             title="Putujte do destinacija koje volite."

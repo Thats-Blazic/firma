@@ -1,13 +1,25 @@
 import type { NextConfig } from "next";
 
+// Destination photos uploaded from the admin panel live in Supabase Storage.
+// Whitelist that host (derived from the env var) so next/image can serve them.
+function supabaseImagePatterns(): NonNullable<NextConfig["images"]>["remotePatterns"] {
+  try {
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    if (!url) return [];
+    const { hostname } = new URL(url);
+    return [{ protocol: "https", hostname, pathname: "/storage/v1/object/public/**" }];
+  } catch {
+    return [];
+  }
+}
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    // All photography is stored locally in /public/images, so no remote
-    // patterns are required. If you later add remote images, whitelist the
-    // host here via `images.remotePatterns`.
+    // Site photography is stored locally in /public/images.
     formats: ["image/avif", "image/webp"],
+    remotePatterns: supabaseImagePatterns(),
   },
 };
 

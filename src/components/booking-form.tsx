@@ -62,7 +62,8 @@ function FieldError({ id, message }: { id: string; message?: string }) {
 
 const sideImage = destinations.find((d) => d.slug === "manastir-ostrog") ?? destinations[0];
 
-export function BookingForm() {
+export function BookingForm({ variant = "primary" }: { variant?: "primary" | "inquiry" }) {
+  const inquiry = variant === "inquiry";
   const { prefill } = useBooking();
   const [sentUrl, setSentUrl] = useState<string | null>(null);
   const today = useMemo(() => startOfToday(), []);
@@ -114,24 +115,30 @@ export function BookingForm() {
 
   return (
     <section
-      id={BOOKING_SECTION_ID}
+      id={inquiry ? "upit" : BOOKING_SECTION_ID}
       aria-labelledby="booking-title"
-      className="section-y relative scroll-mt-20 overflow-hidden bg-bg"
+      className={
+        inquiry
+          ? "section-y relative scroll-mt-20 overflow-hidden border-t border-hair bg-surface"
+          : "section-y relative scroll-mt-20 overflow-hidden bg-bg"
+      }
     >
       <div className="container-page relative grid gap-14 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] lg:gap-16 xl:gap-24">
         <aside className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
-            <Eyebrow index="01" className="mb-6">
-              Rezervacija
+            <Eyebrow index={inquiry ? undefined : "01"} className="mb-6">
+              {inquiry ? "Poseban upit" : "Rezervacija"}
             </Eyebrow>
             <h2
               id="booking-title"
               className="text-[2.125rem] font-semibold leading-[1.06] tracking-[-0.03em] sm:text-5xl lg:text-[3.25rem]"
             >
-              Rezervišite svoje putovanje
+              {inquiry ? "Ne vidite odgovarajući termin?" : "Rezervišite svoje putovanje"}
             </h2>
             <p className="mt-6 max-w-md text-base leading-[1.7] text-muted sm:text-[1.0625rem]">
-              Popunite podatke i pošaljite upit direktno putem WhatsApp-a.
+              {inquiry
+                ? "Pošaljite upit za drugu relaciju ili termin putem WhatsApp-a, pa ćemo se dogovoriti o prevozu po vašoj meri."
+                : "Popunite podatke i pošaljite upit direktno putem WhatsApp-a."}
             </p>
 
             <ul className="mt-10 hidden border-t border-hair lg:block">
