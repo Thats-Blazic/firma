@@ -11,7 +11,7 @@ export function BookingShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-bg">
       <header className="sticky top-0 z-40 border-b border-hair bg-bg/85 backdrop-blur-xl">
         <div className="container-page flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">
-          <Link href="/" aria-label="Adriatic Trans — početna" className="rounded-md">
+          <Link href="/" aria-label="Adrirora Travel — početna" className="rounded-md">
             <Wordmark />
           </Link>
           <div className="flex items-center gap-2 sm:gap-5">

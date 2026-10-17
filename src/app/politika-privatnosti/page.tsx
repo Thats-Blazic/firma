@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Politika privatnosti",
-  description: "Kako Adriatic Trans postupa sa podacima koje ostavite prilikom slanja upita za prevoz.",
+  description: "Kako Adrirora Travel postupa sa podacima koje ostavite prilikom slanja upita za prevoz.",
   alternates: { canonical: "/politika-privatnosti" },
 };
 
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
     <>
       <header className="border-b border-line bg-bg">
         <div className="container-page flex h-[4.5rem] items-center justify-between">
-          <Link href="/" aria-label="Adriatic Trans — početna" className="rounded-xl">
+          <Link href="/" aria-label="Adrirora Travel — početna" className="rounded-xl">
             <Wordmark />
           </Link>
           <Link

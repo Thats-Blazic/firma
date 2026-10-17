@@ -1,5 +1,5 @@
 -- ============================================================================
---  Adriatic Trans — booking system schema
+--  Adrirora Travel — booking system schema
 --  Run once in the Supabase SQL editor (or with `supabase db push`).
 --  Safe to read top to bottom: tables → helpers → triggers → views → RPC → RLS.
 -- ============================================================================
@@ -24,7 +24,7 @@ $$;
 -- ---------------------------------------------------------------------------
 create table public.settings (
   id smallint primary key default 1 check (id = 1),
-  company_name text not null default 'Adriatic Trans',
+  company_name text not null default 'Adrirora Travel',
   company_phone text not null default '',
   company_email text not null default '',
   company_address text not null default '',

@@ -77,7 +77,7 @@ export function Navbar() {
           scrolled ? "h-[4.25rem]" : "h-20",
         )}
       >
-        <a href="#pocetna" aria-label="Adriatic Trans — početna" className="rounded-xl">
+        <a href="#pocetna" aria-label="Adrirora Travel — početna" className="rounded-xl">
           <Wordmark />
         </a>
 

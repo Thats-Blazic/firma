@@ -106,7 +106,7 @@ export function ContactSection() {
         {contact.mapEmbedUrl ? (
           <Reveal className="mt-14 overflow-hidden rounded-2xl border border-line">
             <iframe
-              title="Lokacija Adriatic Trans na mapi"
+              title="Lokacija Adrirora Travel na mapi"
               src={contact.mapEmbedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

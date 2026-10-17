@@ -27,7 +27,7 @@ export function Footer() {
 
       <div className="container-page grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.4fr]">
         <div>
-          <Link href="/#pocetna" aria-label="Adriatic Trans — na vrh stranice" className="inline-block rounded-xl">
+          <Link href="/#pocetna" aria-label="Adrirora Travel — na vrh stranice" className="inline-block rounded-xl">
             <Wordmark />
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">

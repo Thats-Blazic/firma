@@ -1,7 +1,7 @@
 {
   "name": "adriatic-trans",
   "version": "1.0.0",
-  "description": "Adriatic Trans - premium passenger transfer website",
+  "description": "Adrirora Travel - premium passenger transfer website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -5,7 +5,7 @@ import { formatDateSr } from "@/lib/dates";
 /** Builds the Serbian inquiry text that is sent through WhatsApp. */
 export function buildBookingMessage(values: BookingFormValues): string {
   const lines: string[] = [
-    "Poštovani Adriatic Trans,",
+    "Poštovani Adrirora Travel,",
     "",
     "Želeo/la bih da pošaljem upit za rezervaciju prevoza.",
     "",

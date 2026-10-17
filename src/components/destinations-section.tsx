@@ -26,7 +26,7 @@ export function DestinationsSection({ sectionIndex = "02" }: { sectionIndex?: st
           />
           <Reveal delay={0.1} className="max-w-sm">
             <p className="text-base leading-[1.7] text-muted sm:text-[1.0625rem]">
-              Od planinskih predela do jadranske obale, Adriatic Trans vas vodi tamo gde želite da budete.
+              Od planinskih predela do jadranske obale, Adrirora Travel vas vodi tamo gde želite da budete.
             </p>
           </Reveal>
         </div>

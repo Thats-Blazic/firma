@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- *  ADRIATIC TRANS — central site configuration
+ *  ADRIRORA TRAVEL — central site configuration
  * ============================================================================
  *  Everything a business owner needs to edit lives in this file:
  *    • WhatsApp number            → `whatsapp.number`   (REQUIRED before launch)
@@ -36,9 +36,9 @@ export type Destination = {
 };
 
 export const siteConfig = {
-  name: "Adriatic Trans",
-  shortName: "Adriatic Trans",
-  title: "Adriatic Trans | Prevoz putnika i transferi",
+  name: "Adrirora Travel",
+  shortName: "Adrirora Travel",
+  title: "Adrirora Travel | Prevoz putnika i transferi",
   description:
     "Udoban i pouzdan prevoz putnika putničkim automobilom do Zlatibora, Ostroga, Budve, Kotora, Tivta, Podgorice i drugih destinacija u Srbiji i Crnoj Gori. Pošaljite upit putem WhatsApp-a.",
   /** Canonical site URL. Override with NEXT_PUBLIC_SITE_URL in production. */
@@ -50,7 +50,7 @@ export const siteConfig = {
     /** International format, digits only. See the note at the top of this file. */
     number: envWhatsApp || "381612378859",
     /** Opening line used by the generic "contact us" buttons (not the booking form). */
-    greeting: "Poštovani Adriatic Trans, želeo/la bih da se informišem o prevozu.",
+    greeting: "Poštovani Adrirora Travel, želeo/la bih da se informišem o prevozu.",
   },
 
   contact: {
@@ -78,7 +78,7 @@ export const siteConfig = {
     /** Direct link to your Google review form / Business Profile reviews. */
     reviewUrl: "",
     /** Used only when `reviewUrl` is empty. */
-    fallbackSearchUrl: "https://www.google.com/search?q=Adriatic+Trans+recenzije",
+    fallbackSearchUrl: "https://www.google.com/search?q=Adrirora+Travel+recenzije",
     /**
      * Set ONLY with genuine data from your Google Business Profile, e.g.
      * `{ rating: 4.9, count: 27 }`. While `null`, no rating is shown.
@@ -222,7 +222,7 @@ export const reviewsConfig = {
       initials: "MP",
       date: "Beograd, Srbija",
       rating: 5,
-      text: "Sve pohvale za Adriatic Trans! Vožnja je bila odlična, auto čist i udoban, a vozač maksimalno profesionalan i ljubazan. Stigli smo na vreme bez ikakvih problema. Definitivno preporuka!",
+      text: "Sve pohvale za Adrirora Travel! Vožnja je bila odlična, auto čist i udoban, a vozač maksimalno profesionalan i ljubazan. Stigli smo na vreme bez ikakvih problema. Definitivno preporuka!",
     },
     {
       id: "nikola-jovanovic",
@@ -254,7 +254,7 @@ export const reviewsConfig = {
       initials: "AM",
       date: "Nikšić, Crna Gora",
       rating: 5,
-      text: "Sve preporuke za Adriatic Trans! Vozač je bio tačan, kulturan i veoma prijatan. Vožnja je bila sigurna i opuštena, a dogovor jednostavan i brz. Usluga na nivou!",
+      text: "Sve preporuke za Adrirora Travel! Vozač je bio tačan, kulturan i veoma prijatan. Vožnja je bila sigurna i opuštena, a dogovor jednostavan i brz. Usluga na nivou!",
     },
   ] as { id: string; name: string; initials: string; date: string; rating: number; text: string }[],
 };

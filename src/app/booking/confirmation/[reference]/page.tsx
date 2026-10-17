@@ -42,7 +42,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ r
   const phone = settings.company_phone || siteConfig.contact.phone;
 
   const message = [
-    "Poštovani Adriatic Trans,",
+    "Poštovani Adrirora Travel,",
     `upravo sam poslao/la rezervaciju ${booking.reference}.`,
     `Relacija: ${booking.origin_name} → ${booking.destination_name}`,
     `Polazak: ${formatDateTimeSr(booking.departure_at, tz)}`,

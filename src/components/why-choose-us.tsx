@@ -49,7 +49,7 @@ export function WhyChooseUs() {
             index="04"
             id="why-title"
             eyebrow="Zašto mi"
-            title="Zašto odabrati Adriatic Trans?"
+            title="Zašto odabrati Adrirora Travel?"
             description="Putovanje treba da bude jednostavno. Zato se trudimo da svaki korak — od upita do polaska — bude jasan i prijatan."
           />
 

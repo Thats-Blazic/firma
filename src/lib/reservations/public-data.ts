@@ -21,7 +21,7 @@ import type {
 
 const DEFAULT_SETTINGS: Settings = {
   id: 1,
-  company_name: "Adriatic Trans",
+  company_name: "Adrirora Travel",
   company_phone: "",
   company_email: "",
   company_address: "",
